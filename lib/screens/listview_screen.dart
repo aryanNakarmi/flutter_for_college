@@ -123,7 +123,7 @@ class _ListViewScreenState extends State<ListViewScreen> {
                             city: _selectedCity!
                             );
                         setState(() {
-                          _lstStdents.add(student);
+                          _lstStudents.add(student);
                         });
 
                         }
