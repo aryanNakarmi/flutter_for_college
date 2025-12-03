@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_for_college/models/student_model.dart';
 
 class OutputScreen extends StatelessWidget {
   const OutputScreen({super.key});
