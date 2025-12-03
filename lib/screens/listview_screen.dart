@@ -168,7 +168,7 @@ class _ListViewScreenState extends State<ListViewScreen> {
               ),
               const SizedBox(height: 40),
               if(_lstStudents.isNotEmpty)...{
-                ListviewWidget(lstStudents: _lstStdents,)              
+                ListviewWidget(lstStudents: _lstStudents,)              
               }else...{
                  Text(
                 "No Data",
