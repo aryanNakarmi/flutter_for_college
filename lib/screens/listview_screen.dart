@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_for_college/models/student_model.dart';
+import 'package:flutter_for_college/widgets/listview_widget.dart';
 import 'output_screen.dart';
 
 class ListViewScreen extends StatefulWidget {
@@ -16,7 +17,7 @@ class _ListViewScreenState extends State<ListViewScreen> {
 
   String? _selectedCity;
 
-  final List<StudentModel> _lstStdents = [];
+  final List<StudentModel> _lstStudents = [];
 
   // To display list of cities in dropdown
   final List<DropdownMenuItem<String>> _cities = [
@@ -166,39 +167,8 @@ class _ListViewScreenState extends State<ListViewScreen> {
                 ],
               ),
               const SizedBox(height: 40),
-              if(_lstStdents.isNotEmpty)...{
-                ListView.builder(
-
-                  shrinkWrap: true,
-                  physics: const NeverScrollableScrollPhysics(),
-                  itemCount: _lstStdents.length,
-                  itemBuilder: (context, index){
-                    final student = _lstStdents[index];
-                    return Card(
-                      margin: const EdgeInsets.symmetric(vertical: 8),
-                      child: ListTile(
-                        leading: CircleAvatar(
-                          child: Text(student.fname[0].toUpperCase()),
-                        ),
-                        title: Text('${student.fname} ${student.lname}'),
-                        subtitle: Text(student.city),
-                        trailing: Wrap(
-                          spacing:12,
-                          children: [
-                            IconButton(
-                              icon: const Icon(Icons.delete, color: Colors.red),
-                              onPressed: (){
-                                setState(() {
-                                  _lstStdents.removeAt(index);
-                                });
-                              }, 
-                              )
-                         ]
-                        ),
-                      ),
-                    );
-                  }
-                  )                
+              if(_lstStudents.isNotEmpty)...{
+                ListviewWidget(lstStudents: _lstStdents,)              
               }else...{
                  Text(
                 "No Data",
