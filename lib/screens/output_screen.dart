@@ -3,7 +3,7 @@ import 'package:flutter_for_college/models/student_model.dart';
 
 class OutputScreen extends StatelessWidget {
   const OutputScreen({super.key});
-  final List<StudentModel> lstStudent;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
