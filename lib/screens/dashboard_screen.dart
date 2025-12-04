@@ -130,7 +130,7 @@ class DashboardScreen extends StatelessWidget {
                         icon: Icons.layers_rounded,
                         gradient: LinearGradient(colors: [const Color.fromARGB(255, 82, 218, 218), const Color.fromARGB(255, 12, 143, 143)]), 
                         onTap: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>EmployeeDetailScreen()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>EmployeeDetailsScreen()));
                         }),
                     ],
                   ),
