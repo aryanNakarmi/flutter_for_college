@@ -12,6 +12,7 @@ class ListviewWidget extends StatelessWidget {
      ListView.builder(
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
+      itemCount: lstStudents.length,
       itemBuilder: (context, index) {
         final student = lstStudents[index];
         return Card(
