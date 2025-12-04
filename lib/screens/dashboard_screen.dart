@@ -123,6 +123,12 @@ class DashboardScreen extends StatelessWidget {
                         },
                       ),
                       const SizedBox(height: 20),
+                      _buildDashboardCard(
+                        context, title: 'Employee Screen',
+                        subtitle: 'Employee Id, Name, Gender, Department',
+                        icon: Icons.layers_rounded,
+                        gradient: LinearGradient(colors: [Colors.cyanAccent, const Color.fromARGB(255, 12, 143, 143)]), 
+                        onTap: onTap)
                     ],
                   ),
                 ),
