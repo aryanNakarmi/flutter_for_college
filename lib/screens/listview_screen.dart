@@ -148,7 +148,7 @@ class _ListViewScreenState extends State<ListViewScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const OutputScreen(),
+                            builder: (context) => OutputScreen(lstStudents: _lstStudents),
                           ),
                         );
                       },
