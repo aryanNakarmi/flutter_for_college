@@ -127,7 +127,7 @@ class DashboardScreen extends StatelessWidget {
                       _buildDashboardCard(
                         context, title: 'Employee Screen',
                         subtitle: 'Employee Id, Name, Gender, Department',
-                        icon: Icons.layers_rounded,
+                        icon: Icons.emoji_people,
                         gradient: LinearGradient(colors: [const Color.fromARGB(255, 82, 218, 218), const Color.fromARGB(255, 12, 143, 143)]), 
                         onTap: (){
                           Navigator.push(context, MaterialPageRoute(builder: (context)=>EmployeeDetailsScreen()));

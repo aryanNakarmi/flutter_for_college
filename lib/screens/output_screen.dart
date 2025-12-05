@@ -4,7 +4,9 @@ import 'package:flutter_for_college/widgets/listview_widget.dart';
 
 class OutputScreen extends StatelessWidget {
   const OutputScreen({super.key, required this.lstStudents});
+
   final List<StudentModel> lstStudents;
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(

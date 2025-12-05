@@ -10,10 +10,31 @@ class CardViewScreen extends StatelessWidget {
         title: const Text('CardView'),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
-      body: const Center(
-        child: Text(
-          'cardview',
-          style: TextStyle(fontSize: 24),
+      body: SizedBox(
+        height: 200,
+        width: double.infinity,
+        child: Card(
+          color: Colors.amber,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)
+          ),
+          elevation: 8,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children :[
+              Text(
+                "first name: John",
+                style: TextStyle(fontSize: 24, color: Colors.grey),
+              ),
+              Text(
+                "last name: Doe",
+                style: TextStyle(fontSize: 24, color: Colors.grey),
+              ),
+              Text(
+                "City : New york",
+                style: TextStyle(fontSize: 24, color: Colors.grey),
+              ),
+            ]
+          )
         ),
       ),
     );
