@@ -1,42 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_for_college/models/student_model.dart';
+import 'package:flutter_for_college/widgets/card_widget.dart';
 
 class CardViewScreen extends StatelessWidget {
   const CardViewScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+
+    final List<StudentModel> students = [
+      StudentModel(fname: 'Aryan', lname: 'Nakarmi', city: 'Kathmandu'),
+      StudentModel(fname: 'Asrim', lname: 'Suwal', city: 'Bhatkapur'),
+      StudentModel(fname: 'Ishan', lname: 'Dhami', city: 'Kathmandu'),
+      StudentModel(fname: 'Amit', lname: 'Khayargoli', city: 'Bhaktapur'),
+    ];
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('CardView'),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
-      body: SizedBox(
-        height: 200,
-        width: double.infinity,
-        child: Card(
-          color: Colors.amber,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)
-          ),
-          elevation: 8,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children :[
-              Text(
-                "first name: John",
-                style: TextStyle(fontSize: 24, color: Colors.grey),
-              ),
-              Text(
-                "last name: Doe",
-                style: TextStyle(fontSize: 24, color: Colors.grey),
-              ),
-              Text(
-                "City : New york",
-                style: TextStyle(fontSize: 24, color: Colors.grey),
-              ),
-            ]
-          )
-        ),
-      ),
+      body: ListView.builder(
+        itemCount: students.length,
+        itemBuilder: (context,index){
+          final student = students[index];
+          return CardWidget(student: student);
+        },
+
+        
+      )
     );
+
   }
 }
