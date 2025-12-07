@@ -23,15 +23,15 @@ class CardWidget extends StatelessWidget {
               children :[
                 Text(
                   "First name: ${student.fname}",
-                  style: TextStyle(fontSize: 24, color: Colors.grey),
+                  style: TextStyle(fontSize: 24),
                 ),
                 Text(
                   "Last name: ${student.lname}",
-                  style: TextStyle(fontSize: 24, color: Colors.grey),
+                  style: TextStyle(fontSize: 24,),
                 ),
                 Text(
                   "City : ${student.city}",
-                  style: TextStyle(fontSize: 24, color: Colors.grey),
+                  style: TextStyle(fontSize: 24),
                 ),
               ]
             )
