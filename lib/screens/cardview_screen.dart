@@ -13,6 +13,7 @@ class CardViewScreen extends StatelessWidget {
       StudentModel(fname: 'Asrim', lname: 'Suwal', city: 'Bhatkapur'),
       StudentModel(fname: 'Ishan', lname: 'Dhami', city: 'Kathmandu'),
       StudentModel(fname: 'Amit', lname: 'Khayargoli', city: 'Bhaktapur'),
+      
     ];
 
     return Scaffold(
