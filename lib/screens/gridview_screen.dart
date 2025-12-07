@@ -15,24 +15,19 @@ class GridViewScreen extends StatelessWidget {
         mainAxisSpacing: 8,
         crossAxisCount: 2,
         children: [
-          Container(
-            alignment: Alignment.center,
-            color: Colors.amber,
-            child: const Text(
-              '1',
-              style: TextStyle(fontSize: 50),
-            ),
-            ),
+          for( int i= 1; i <= 10; i++)...{
+
+          ElevatedButton(
+            onPressed: () {},
+            child: Text(
+              '$i',
+              // style:ElevatedButton.styleFrom(
+              //  Colors.teal),
+
+            )
+          ),
           
-          Container(
-            alignment: Alignment.center,
-            color: Colors.amber,
-            child: const Text(
-              '2',
-              style: TextStyle(fontSize: 50),
-            ),
-            ),
-          
+          }
         ],
 
       )
