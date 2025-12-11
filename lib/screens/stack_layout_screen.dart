@@ -34,7 +34,7 @@ class StackLayoutScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              bottom: -20,
+              bottom: -50,
               right: 400 / 2 - 50,
               child: Container(
                 height: 100,
